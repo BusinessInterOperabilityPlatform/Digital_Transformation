@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Digital Transformation Playbook for MSMEs | Government of Karnataka</title>
+
+<style>
+:root{
+  --bg:#ffffff;
+  --text:#0f172a;
+  --muted:#475569;
+  --card:#f8fafc;
+  --accent:#1e40af;
+  --good:#15803d;
+  --bad:#b91c1c;
+  --border:#e5e7eb;
+}
+
+[data-theme="dark"]{
+  --bg:#0b1220;
+  --text:#e5e7eb;
+  --muted:#94a3b8;
+  --card:#111827;
+  --accent:#60a5fa;
+  --good:#4ade80;
+  --bad:#f87171;
+  --border:#1f2937;
+}
+
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+
+body{
+  font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto;
+  background:var(--bg);
+  color:var(--text);
+  line-height:1.75;
+}
+
+header{
+  position:fixed;
+  top:0;
+  width:100%;
+  background:var(--bg);
+  border-bottom:1px solid var(--border);
+  z-index:100;
+}
+
+.nav{
+  max-width:1200px;
+  margin:auto;
+  padding:12px 20px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  flex-wrap:wrap;
+}
+
+.nav img{
+  height:36px;
+}
+
+.nav a{
+  margin-left:14px;
+  font-size:14px;
+  text-decoration:none;
+  color:var(--muted);
+}
+.nav a:hover{color:var(--accent)}
+
+.toggle{
+  border:1px solid var(--border);
+  padding:6px 12px;
+  border-radius:20px;
+  font-size:12px;
+  cursor:pointer;
+}
+
+section{
+  max-width:1200px;
+  margin:auto;
+  padding:120px 20px 90px;
+  opacity:0;
+  transform:translateY(30px);
+  transition:all .8s ease;
+}
+section.visible{opacity:1;transform:none}
+
+h1{font-size:42px;margin-bottom:18px}
+h2{font-size:30px;margin-bottom:16px}
+h3{font-size:20px;margin-bottom:10px}
+
+p{color:var(--muted);max-width:980px}
+
+.card{
+  background:var(--card);
+  border:1px solid var(--border);
+  border-radius:18px;
+  padding:28px;
+}
+
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+  gap:26px;
+  margin-top:32px;
+}
+
+/* FLOW */
+.flow{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:40px;
+  margin-top:40px;
+}
+@media(max-width:900px){.flow{grid-template-columns:1fr}}
+
+.flow-box{
+  border:2px dashed var(--border);
+  border-radius:18px;
+  padding:26px;
+}
+.flow-step{
+  background:var(--card);
+  padding:14px 18px;
+  border-radius:12px;
+  margin:12px 0;
+}
+.flow-before .flow-step{border-left:6px solid var(--bad)}
+.flow-after .flow-step{border-left:6px solid var(--good)}
+
+.arch{
+  display:flex;
+  flex-direction:column;
+  gap:18px;
+  margin-top:36px;
+}
+.layer{
+  padding:22px;
+  border-radius:18px;
+  border:1px dashed var(--border);
+  background:linear-gradient(120deg,var(--card),transparent);
+  text-align:center;
+}
+
+.pdf-btn{
+  position:fixed;
+  right:20px;
+  bottom:20px;
+  background:linear-gradient(135deg,var(--accent),var(--good));
+  color:white;
+  padding:14px 20px;
+  border-radius:30px;
+  cursor:pointer;
+  box-shadow:0 20px 40px rgba(0,0,0,.25);
+  z-index:200;
+}
+
+footer{
+  text-align:center;
+  padding:60px 20px;
+  border-top:1px solid var(--border);
+  color:var(--muted);
+}
+
+@media print{
+  header,.pdf-btn,.toggle{display:none}
+  section{opacity:1!important;transform:none!important;padding:40px}
+}
+</style>
+</head>
+
+<body data-theme="light">
+
+<header>
+  <div class="nav">
+    <img src="SCM_Logo.png" alt="SCM Central Logo">
+    <div>
+      <a href="#intro">Overview</a>
+      <a href="#policy">Policy Intent</a>
+      <a href="#reality">Ground Reality</a>
+      <a href="#flow">Before / After</a>
+      <a href="#solution">Execution Model</a>
+      <a href="#benefits">Benefits</a>
+      <a href="#partnership">Partnership</a>
+      <span class="toggle" onclick="toggleTheme()">Dark / Light</span>
+    </div>
+  </div>
+</header>
+
+<section id="intro">
+  <h1>Digital Transformation Playbook for MSMEs</h1>
+  <p>
+    This document explains — in simple terms — how Karnataka can convert
+    its Industrial Policy 2025–30 into real, visible, and measurable outcomes
+    inside MSME factories and supply chains.
+  </p>
+  <p>
+    It does not require new behaviour from MSMEs.
+    It does not replace existing software.
+    It focuses on connecting what already exists.
+  </p>
+</section>
+
+<section id="policy">
+  <h2>What the Government Policy Clearly Seeks</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>Ease of Doing Business</h3>
+      <p>
+        Reduce effort required to operate, comply, report, and grow.
+        Digital systems should make business easier, not more complex.
+      </p>
+    </div>
+    <div class="card">
+      <h3>Stronger MSMEs</h3>
+      <p>
+        Help MSMEs deliver on time, manage cash better,
+        and participate confidently in larger supply chains.
+      </p>
+    </div>
+    <div class="card">
+      <h3>Industry 5.0 Readiness</h3>
+      <p>
+        Technology must support people, not replace them.
+        Systems should improve coordination, resilience, and sustainability.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section id="reality">
+  <h2>What Actually Happens Today</h2>
+  <p>
+    Most MSMEs already use software — accounting tools, spreadsheets,
+    emails, messaging apps. The problem is not lack of tools.
+    The problem is lack of connection between them.
+  </p>
+
+  <div class="grid">
+    <div class="card">
+      <h3>Information Is Repeated</h3>
+      <p>
+        The same order details are typed multiple times
+        across systems, increasing errors and effort.
+      </p>
+    </div>
+    <div class="card">
+      <h3>Planning Is Isolated</h3>
+      <p>
+        Each company plans independently without knowing
+        supplier capacity or customer changes in advance.
+      </p>
+    </div>
+    <div class="card">
+      <h3>Problems Are Seen Late</h3>
+      <p>
+        Delays are discovered after commitments are made,
+        leaving no room to correct course.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section id="flow">
+  <h2>Supply Chain Flow — Clear Difference</h2>
+
+  <div class="flow">
+    <div class="flow-box flow-before">
+      <h3>Before: Manual Coordination</h3>
+      <div class="flow-step">Order sent via email or message</div>
+      <div class="flow-step">Follow-up calls for confirmation</div>
+      <div class="flow-step">Planning done in isolation</div>
+      <div class="flow-step">Delay discovered after deadline</div>
+      <div class="flow-step">Customer dissatisfaction</div>
+    </div>
+
+    <div class="flow-box flow-after">
+      <h3>After: Connected Systems</h3>
+      <div class="flow-step">Order flows system-to-system</div>
+      <div class="flow-step">Digital acknowledgement</div>
+      <div class="flow-step">Shared planning visibility</div>
+      <div class="flow-step">Early alerts & adjustments</div>
+      <div class="flow-step">Predictable delivery</div>
+    </div>
+  </div>
+</section>
+
+<section id="solution">
+  <h2>How SCM Central Solves This — Step by Step</h2>
+
+  <p>
+    SCM Central does not introduce a new system that MSMEs must learn or replace
+    their existing software with. Instead, it works as a simple connecting layer
+    that allows existing systems and companies to communicate digitally.
+  </p>
+
+  <div class="grid">
+    <div class="card">
+      <h3>Step 1: Keep Existing Software</h3>
+      <p>
+        MSMEs continue using the tools they already trust —
+        such as Tally, Zoho, Excel, or any in-house system.
+        No replacement. No disruption.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>Step 2: Connect Systems Securely</h3>
+      <p>
+        SCM Central connects these systems so that basic business information
+        like orders, quantities, and delivery dates
+        can move automatically between companies.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>Step 3: Enable Digital Company-to-Company Communication</h3>
+      <p>
+        Instead of emails, phone calls, or messages,
+        purchase orders, confirmations, and schedules
+        are shared digitally and recorded automatically.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>Step 4: Shared Visibility for Planning</h3>
+      <p>
+        Buyers can see supplier confirmations.
+        Suppliers can see upcoming demand.
+        Both sides can plan better and earlier.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>Step 5: Early Alerts, Not Late Surprises</h3>
+      <p>
+        If delays or shortages are likely,
+        the system highlights them early —
+        giving time to adjust before commitments are missed.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>Step 6: Create a Connected Cluster Network</h3>
+      <p>
+        When many MSMEs in a cluster are connected,
+        the entire cluster functions as a coordinated network
+        instead of isolated individual units.
+      </p>
+    </div>
+  </div>
+
+  <div class="arch">
+    <div class="layer">
+      Existing MSME Tools<br>
+      <small>Tally • Zoho • Excel • Custom Software</small>
+    </div>
+    <div class="layer">
+      <strong>SCM Central</strong><br>
+      Simple Digital Connection Layer
+    </div>
+    <div class="layer">
+      Buyers • Suppliers • MSME Clusters • Government Programs
+    </div>
+  </div>
+</section>
+
+<section id="benefits">
+  <h2>Clear and Measurable Value Creation</h2>
+
+  <p>
+    The value of this approach is not theoretical.
+    It creates visible, measurable improvements
+    at three levels — MSMEs, Government, and the State.
+  </p>
+
+  <div class="grid">
+    <div class="card">
+      <h3>Value for MSMEs</h3>
+      <p>
+        MSMEs spend less time chasing information
+        and more time running their business.
+      </p>
+      <p>
+        Orders are clearer. Commitments are realistic.
+        Production planning improves because demand visibility improves.
+      </p>
+      <p>
+        This leads to better delivery performance,
+        improved customer trust,
+        and healthier cash flow.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>Value for Government</h3>
+      <p>
+        Government initiatives move from awareness programs
+        to visible execution on the ground.
+      </p>
+      <p>
+        Adoption and outcomes can be tracked at cluster level —
+        not through reports, but through real operational data.
+      </p>
+      <p>
+        Ease of Doing Business improves naturally
+        because processes become simpler,
+        faster, and more transparent.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>Value for Karnataka as a State</h3>
+      <p>
+        Industrial clusters become more reliable,
+        resilient, and competitive.
+      </p>
+      <p>
+        Supply chains within the state strengthen,
+        reducing dependence on external coordination.
+      </p>
+      <p>
+        Karnataka builds a practical foundation
+        for Industry 5.0 — technology that supports people,
+        improves sustainability, and strengthens the economy.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section id="partnership">
+  <h2>Proposed Partnership</h2>
+  <div class="card">
+    <p>
+      Appoint SCM Central as a Digital Transformation Partner
+      to deploy this model through SME Connect, KCTU, and Centres of Excellence.
+      Begin with pilot clusters and scale statewide.
+    </p>
+  </div>
+</section>
+
+<footer>
+  SCM Central • A Tekenlight Product • Digital Infrastructure for Karnataka MSMEs
+</footer>
+
+<div class="pdf-btn" onclick="window.print()">Download PDF</div>
+
+<script>
+function toggleTheme(){
+  document.body.setAttribute(
+    "data-theme",
+    document.body.getAttribute("data-theme")==="dark"?"light":"dark"
+  );
+}
+
+const observer=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting)e.target.classList.add("visible");
+  });
+},{threshold:0.15});
+
+document.querySelectorAll("section").forEach(s=>observer.observe(s));
+</script>
+
+</body>
+</html>
